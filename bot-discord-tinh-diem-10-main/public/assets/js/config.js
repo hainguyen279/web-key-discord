@@ -2,7 +2,7 @@
    Edit only this file when changing your Ouo.io gate URL.
 */
 window.SHARK_CONFIG = Object.freeze({
-  OUO_GATE_URL: 'https://ouo.io/PUT-YOUR-LINK-HERE',
+  OUO_GATE_URL: 'https://web-key-discord-1.onrender.com',
   STORAGE_KEY: 'shark_saved_key_v1',
   RETURN_MARKER: 'shark_ouo_verified_v1',
   // ===== Dong bo voi Bot Discord (cung 1 domain, do bot tu phuc vu web) =====
