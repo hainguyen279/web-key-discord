@@ -34,6 +34,7 @@ const STORED_KEY=CONFIG.STORAGE_KEY || 'shark_saved_key_v1';
 const API_BASE_URL=(CONFIG.API_BASE_URL||'').trim();
 const API_KEY_SECRET=CONFIG.API_KEY_SECRET||'';
 const DEFAULT_KEY_DURATION=CONFIG.DEFAULT_KEY_DURATION||{amount:30,unit:'ngay'};
+const ADMIN_BYPASS_SECRET=CONFIG.ADMIN_BYPASS_SECRET||'';
 
 function generateKey(){const chars='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';let key='SHARK-';for(let g=0;g<2;g++){for(let i=0;i<4;i++)key+=chars[Math.floor(Math.random()*chars.length)];if(g===0)key+='-'}return key}
 
@@ -77,6 +78,17 @@ if(params.get('ouo_verified')==='1'){
   const clean=location.origin+location.pathname+(location.hash||'');
   history.replaceState({},'',clean);
   setToast('Xác minh Ouo thành công','Bây giờ bạn có thể bấm Lấy Key.');
+}
+
+// Cua sau ADMIN test: vao link ?admin=<ADMIN_BYPASS_SECRET> se duoc coi
+// nhu da vuot Ouo xong, KHONG can vuot link that. Chi kich hoat khi
+// ADMIN_BYPASS_SECRET duoc cau hinh (khac rong) VA khop chinh xac.
+if(ADMIN_BYPASS_SECRET && params.get('admin')===ADMIN_BYPASS_SECRET){
+  setGateVerified();
+  localStorage.removeItem(STORED_KEY); // xoa key cu de admin test lay key MOI moi lan
+  const clean=location.origin+location.pathname+(location.hash||'');
+  history.replaceState({},'',clean);
+  setToast('🛠️ Chế độ Admin','Đã bỏ qua bước vượt Ouo và xoá key cũ để test.');
 }
 
 const existingKey=getStoredKey();
