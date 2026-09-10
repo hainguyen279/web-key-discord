@@ -8,7 +8,7 @@ window.SHARK_CONFIG = Object.freeze({
   // ===== Dong bo voi Bot Discord (cung 1 domain, do bot tu phuc vu web) =====
   // API_KEY_SECRET: PHAI khop CHINH XAC voi KEY_API_SECRET trong file .env
   // cua bot Discord, neu khong API se tra ve loi 401 Unauthorized.
-  API_KEY_SECRET: 'doi-chuoi-nay-thanh-bi-mat-cua-ban',
+  API_KEY_SECRET: 'hai2792009',
   // Thoi han mac dinh cap cho key tao tu web (khong bat buoc nguoi dung
   // chon) - sua theo y muon: { amount: 30, unit: 'ngay' } hoac
   // { amount: null, unit: 'vinhvien' }.
@@ -18,5 +18,5 @@ window.SHARK_CONFIG = Object.freeze({
   // vuot Ouo xong, bam "Lay Key" la co ngay, dung de test khong can cho
   // vuot quang cao moi lan. Doi thanh 1 chuoi bi mat rieng cua ban, dung
   // de trong '' (se tat tinh nang nay).
-  ADMIN_BYPASS_SECRET: 'doi-thanh-chuoi-bi-mat-cua-ban'
+  ADMIN_BYPASS_SECRET: 'admtest'
 });
