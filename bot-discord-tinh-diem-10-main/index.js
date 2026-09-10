@@ -3,6 +3,11 @@ const fs = require("fs");
 const path = require("path");
 const { Client, GatewayIntentBits, Partials, Events, Collection } = require("discord.js");
 const config = require("./config.json");
+
+// Thong bao dung chung khi nguoi dung CHUA kich hoat/da het han - dung o
+// ca lenh prefix (!td...) lan lenh slash (/taolineup...).
+const NOT_ACTIVATED_MESSAGE =
+  "Vui Lòng Dành Ra 30s Vào Web Lấy Key Để Kích Hoạt : https://web-key-discord-1.onrender.com";
 const { handleScoreCommand } = require("./commands/scoreCommand");
 const { handleKeyCommand, isUserUnlocked, tryAutoActivateFromMessage } = require("./commands/keyCommand");
 const { createKey } = require("./lib/keyStore");
@@ -232,10 +237,7 @@ client.on(Events.MessageCreate, async (message) => {
     const prefix = config.prefix || "!";
     const body = (message.content || "").trim();
     if (body.startsWith(prefix) && !isUserUnlocked(message.author.id, config)) {
-      await message.reply(
-        `🔒 Bạn chưa được kích hoạt hoặc đã hết hạn dùng bot.\n` +
-        `Lấy key tại trang web, sau đó gõ \`${prefix}key <key>\` (hoặc dán thẳng key vào chat) để kích hoạt riêng cho bạn.`
-      );
+      await message.reply(NOT_ACTIVATED_MESSAGE);
       return;
     }
 
@@ -256,9 +258,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
   // phai admin - dong bo voi kiem tra o lenh prefix "!..." ben tren.
   if (!isUserUnlocked(interaction.user.id, config)) {
     await interaction.reply({
-      content:
-        `🔒 Bạn chưa được kích hoạt hoặc đã hết hạn dùng bot.\n` +
-        `Lấy key tại trang web, sau đó gõ \`${config.prefix || "!"}key <key>\` (hoặc dán thẳng key vào chat) để kích hoạt riêng cho bạn.`,
+      content: NOT_ACTIVATED_MESSAGE,
       ephemeral: true,
     });
     return;
