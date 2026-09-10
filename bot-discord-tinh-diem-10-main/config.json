@@ -1,0 +1,59 @@
+{
+  "comment_0": "===== CAU HINH CHUNG =====",
+  "prefix": "!",
+  "botName": "FF Score Bot",
+  "comment_token": "Co the dien token thang vao day, nhung KHUYEN NGHI dung file .env (DISCORD_TOKEN=...) thay vi luu token o file nay.",
+  "token": "",
+  "comment_1": "===== ADMIN BOT (Discord User ID, KHONG phai ten hien thi) - duoc phep !lock diem / !unlock diem =====",
+  "adminUserIDs": [
+    "1233055712150818917"
+  ],
+  "comment_2": "===== TAT CA CHANNEL MAC DINH DEU BAT TINH NANG TINH DIEM. CHI !lock diem MOI KHOA; !unlock diem DE MO LAI =====",
+  "channelIDs": [],
+  "comment_3": "===== CAU HINH GARENA FF COMMUNITY (giu nguyen tu ban goc) =====",
+  "garena": {
+    "comment_cookie": "===== 1 COOKIE (cach cu, van dung duoc) HOAC nhieu cookie xoay vong (cach moi, khuyen dung) - xem 'cookies' o duoi =====",
+    "cookie": "_ga_FHRB1PREGT=GS2.1.s1785322663$o1$g1$t1785322665$j58$l0$h0; _ga_KPVF9Q7X3C=GS2.1.s1785322825$o1$g1$t1785322890$j60$l0$h0; _ga_N8N2BR6MNT=GS2.1.s1785426391$o1$g1$t1785426659$j25$l0$h0; _ga=GA1.1.612851241.1783256905; _ga_8VW85PMF3B=GS2.1.s1785426660$o1$g1$t1785426839$j34$l0$h0; _ga_L2LB19X5DX=GS2.1.s1785846134$o2$g1$t1785846290$j60$l0$h0; _ga_2RZ7RVH1WQ=GS2.1.s1787090638$o1$g1$t1787090669$j29$l0$h1363993139; _ga_N9NX311Q58=GS2.1.s1787090807$o1$g1$t1787092409$j25$l0$h1989559702; session=45f4cb03-3e1f-45e6-8f6a-2f6ce52e1876; session.sig=RNty10t6TyIinA4t3kQ6jP2kyzI; _ga_GDNE9EKYHZ=GS2.1.s1787658410$o48$g1$t1787658425$j45$l0$h0",
+    "comment_cookies": "===== NHIEU COOKIE (dien cookie cua 3-4 tai khoan Garena KHAC NHAU vao day, moi cookie 1 phan tu trong mang) - bot se TU DONG XOAY VONG (round-robin) qua tung cookie giua cac lan goi API, va tu dong bo qua cookie nao vua bi 401/403 (het han) trong 10 phut roi thu cookie khac, thay vi ca bot ngung hoat dong. Neu de mang nay RONG, bot chi dung 1 cookie o field 'cookie' phia tren nhu cu. Neu dien ca 2, mang 'cookies' duoc uu tien. =====",
+    "cookies": [
+      "_ga_FHRB1PREGT=GS2.1.s1785322663$o1$g1$t1785322665$j58$l0$h0; _ga_KPVF9Q7X3C=GS2.1.s1785322825$o1$g1$t1785322890$j60$l0$h0; _ga_N8N2BR6MNT=GS2.1.s1785426391$o1$g1$t1785426659$j25$l0$h0; _ga=GA1.1.612851241.1783256905; _ga_8VW85PMF3B=GS2.1.s1785426660$o1$g1$t1785426839$j34$l0$h0; _ga_L2LB19X5DX=GS2.1.s1785846134$o2$g1$t1785846290$j60$l0$h0; _ga_2RZ7RVH1WQ=GS2.1.s1787090638$o1$g1$t1787090669$j29$l0$h1363993139; _ga_N9NX311Q58=GS2.1.s1787090807$o1$g1$t1787092409$j25$l0$h1989559702; session=45f4cb03-3e1f-45e6-8f6a-2f6ce52e1876; session.sig=RNty10t6TyIinA4t3kQ6jP2kyzI; _ga_GDNE9EKYHZ=GS2.1.s1787691678$o52$g1$t1787692248$j49$l0$h0",
+      "_ga=GA1.1.396385681.1787692334; session=151bc9bb-f5d8-4996-9614-cc7db39d4af3; session.sig=cnh9kvijBIWvCtV4-r0GDbp4SO4; _ga_GDNE9EKYHZ=GS2.1.s1787692334$o1$g1$t1787692362$j32$l0$h0",
+      "_ga=GA1.1.1736869152.1787692460; session=2b03ec26-4be6-4d6d-a09d-5944a01212d7; session.sig=Ov-XRI3G88V5WQn-9NyCY5JQj4c; _ga_GDNE9EKYHZ=GS2.1.s1787692460$o1$g1$t1787692490$j30$l0$h0",
+      "_ga=GA1.1.2100725300.1787692526; session=d37edc88-9541-4fca-91b6-9c4df63f302a; session.sig=ebcoUM_GdH0WpqTzVDfSbdycdi8; _ga_GDNE9EKYHZ=GS2.1.s1787692526$o1$g1$t1787692639$j55$l0$h0",
+      "_ga=GA1.1.1957283496.1787692674; session=88dec3c7-9c0d-4050-b2db-be2c745f5457; session.sig=XEnzt2WaAltsH4d-rzcWSKwGQUg; _ga_GDNE9EKYHZ=GS2.1.s1787692673$o1$g1$t1787692692$j41$l0$h0",
+      "DAN_COOKIE_TAI_KHOAN_6_VAO_DAY",
+      "DAN_COOKIE_TAI_KHOAN_7_VAO_DAY"
+    ],
+    "matchApiEndpoint": "https://congdong.ff.garena.vn/league-score-api/match",
+    "findMatchApiEndpoint": "https://congdong.ff.garena.vn/league-score-api/player/find-match",
+    "comment_league": "===== API 'league' cua Garena - de LAY BANG TONG DA GOP SAN theo doi (aggregatedTeamRanks), thay vi bot tu doan gop doi qua nhieu tran =====",
+    "createLeagueApiEndpoint": "https://congdong.ff.garena.vn/league-score-api/league/create",
+    "saveMatchApiEndpoint": "https://congdong.ff.garena.vn/league-score-api/league/save-match",
+    "calculateScoreApiEndpoint": "https://congdong.ff.garena.vn/league-score-api/league/calculate-score"
+  },
+  "comment_4": "===== BANG DIEM (giu nguyen tu ban goc, co the chinh sua) =====",
+  "scoring": {
+    "pointsPerKill": 1,
+    "rankPoints": {
+      "1": 12,
+      "2": 9,
+      "3": 8,
+      "4": 7,
+      "5": 6,
+      "6": 5,
+      "7": 4,
+      "8": 3,
+      "9": 2,
+      "10": 1
+    },
+    "rankPointsDefaultBelow10": 0,
+    "comment_5": "===== CHAMPION RUSH (CPR) - dung voi !td cpr ... =====",
+    "championRushThreshold": 50
+  },
+  "comment_6": "===== DON RAC TU DONG - chi xoa PHIEN KHUNG GIO (slotScores) cu, KHONG dung den bang diem mua giai (scores) =====",
+  "cleanup": {
+    "enabled": true,
+    "runAtHourVN": 6,
+    "maxAgeDays": 10
+  }
+}

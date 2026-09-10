@@ -1,0 +1,23 @@
+{
+  "name": "ff-score-discord-bot",
+  "version": "1.0.0",
+  "description": "Bot Discord tinh diem custom Free Fire (diem, td) - chuyen tu ban Messenger sang",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install",
+    "start": "node index.js",
+    "deploy": "node deploy-commands.js"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.100",
+    "axios": "^1.7.2",
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
